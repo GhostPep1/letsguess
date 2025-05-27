@@ -31,7 +31,7 @@ function App() {
   const [revealedWordIndices, setRevealedWordIndices] = useState(new Set());
 
   useEffect(() => {
-    const socket = new WebSocket('ws://localhost:3001');
+ const socket = new WebSocket('wss://letsguess-backend.onrender.com');
 
     socket.onopen = () => {
       setWs(socket);
